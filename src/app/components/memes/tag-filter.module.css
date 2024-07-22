@@ -1,0 +1,17 @@
+.tags {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: rgb(235, 202, 196);
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: rgb(233, 84, 58);
+}

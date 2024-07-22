@@ -1,10 +1,13 @@
 import FormSubmitButton from "@/app/components/input/form-submit-button";
 import TextInput from "@/app/components/input/text-input";
+import { db, getDB } from "@/app/db";
+import { redirect } from "next/navigation";
 import React from "react";
 
-export default function MemeCreatePage() {
-  console.log(MemeCreatePage.name);
+import { nanoid } from "nanoid";
+import { createMeme } from "@/app/db/memes";
 
+export default async function MemeCreatePage() {
   async function handleSubmit(formData) {
     "use server";
     console.log(formData);
@@ -17,11 +20,13 @@ export default function MemeCreatePage() {
       .map((tag) => tag.trim())
       .filter((tag) => tag);
 
-    console.log({
-      title,
+    await createMeme({
       tags,
+      title,
       url,
     });
+
+    return redirect("/memes");
   }
 
   return (

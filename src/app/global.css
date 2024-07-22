@@ -36,3 +36,8 @@ input {
   background-color: dodgerblue;
   color: white;
 }
+
+a {
+  text-decoration: none;
+  color: unset;
+}

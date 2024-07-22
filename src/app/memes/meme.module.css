@@ -1,0 +1,44 @@
+.container {
+}
+.meme {
+  border: 1px solid white;
+  border-radius: 16px;
+}
+
+.meme img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 16px;
+  background-color: gray;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.title {
+  padding: 10px;
+}
+
+.tags {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: tomato;
+  border-radius: 5px;
+  padding: 5px;
+
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: rgb(233, 84, 58);
+}
+
+.memes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
